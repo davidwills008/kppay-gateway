@@ -20,7 +20,7 @@ GitHub's protection readback confirmed:
 - administrator enforcement and linear history;
 - force pushes and branch deletion disabled.
 
-The applied policy is versioned at `config/github/main-branch-protection.json`. Completion remains blocked until the bootstrap CODEOWNERS change reaches `main`, two eligible non-author approvers are named, and the two-review acceptance test passes.
+The applied policy is versioned at `config/github/main-branch-protection.json`. The user confirmed `davidwills008` is the sole current manager, so no eligible non-author approvers presently exist. Completion remains blocked until the bootstrap CODEOWNERS change reaches `main`, two independent approvers are added, and the two-review acceptance test passes.
 
 ## Security controls
 

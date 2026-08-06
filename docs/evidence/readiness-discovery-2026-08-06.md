@@ -15,6 +15,7 @@
 - GitHub branch protection now requires strict `verify`, `dependency-review`, and `codeql` checks, two reviews, code-owner and last-push approval, stale-review dismissal, administrator enforcement, linear history, and resolved conversations; force pushes and deletion are disabled.
 - Secret scanning, push protection, vulnerability alerts, automated security updates, and private vulnerability reporting are enabled; latest main Foundation CI and Security analysis runs passed.
 - Governance PR 4 proved `verify`, `dependency-review`, and `codeql` successfully under the activated public controls, completing `E-006`.
+- The user confirmed `davidwills008` is the sole current project manager. The account is recorded as interim holder of all roles, while independent approval, separation of duties, and on-call escalation remain blocked.
 - Repository foundation evidence remains PASS; operational Stage 1 remains BLOCKED.
 
 ## Framework created
