@@ -38,7 +38,7 @@ Dates below are proposed control dates. The accountable people must accept them 
 | Static style and architecture rules | Architecture Owner | PASS | Checkstyle and ArchUnit fail invalid changes | Maven test reports |
 | Unit/integration separation and coverage | Service Owner | PASS | Surefire/Failsafe run and line coverage is at least 80% | JaCoCo and test reports |
 | Software bill of materials | Security Engineering | PASS | CycloneDX SBOM produced for every build | `target/classes/META-INF/sbom/` |
-| Pull-request and security automation | Repository Administrator | READY | CI, dependency review, CodeQL, and Dependabot run successfully | GitHub check URLs |
+| Pull-request and security automation | Repository Administrator | PASS | CI, dependency review, CodeQL, and Dependabot run successfully | `docs/evidence/github-controls-2026-08-06.md` |
 | Branch governance and code ownership | Repository Administrator | BLOCKED | Protected `main`, two-person review for critical changes, valid CODEOWNERS | GitHub ruleset URL |
 | Secrets lifecycle | Security Engineering | BLOCKED | Managed store, workload identity, audit, rotation and revocation tested | Secret-manager audit record |
 | Authentication baseline | Security Engineering | PASS | Production profile requires JWT; authorized and unauthorized tests pass | Failsafe report |

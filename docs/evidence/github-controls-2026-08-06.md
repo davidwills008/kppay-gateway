@@ -20,7 +20,7 @@ GitHub's protection readback confirmed:
 - administrator enforcement and linear history;
 - force pushes and branch deletion disabled.
 
-The applied policy is versioned at `config/github/main-branch-protection.json`. Completion remains blocked until the bootstrap CODEOWNERS change reaches `main`, a second eligible approver is named, and the two-review acceptance test passes.
+The applied policy is versioned at `config/github/main-branch-protection.json`. Completion remains blocked until the bootstrap CODEOWNERS change reaches `main`, two eligible non-author approvers are named, and the two-review acceptance test passes.
 
 ## Security controls
 
@@ -41,5 +41,10 @@ The mutable security settings are versioned at `config/github/security-and-analy
 - Latest Foundation CI on `main`: `https://github.com/davidwills008/kppay-gateway/actions/runs/31103737323` — success.
 - Latest Security analysis on `main`: `https://github.com/davidwills008/kppay-gateway/actions/runs/31103737267` — success.
 - Dependabot created and the user merged Maven and SHA-pinned GitHub Action updates after their Foundation CI checks passed.
+- Governance PR: `https://github.com/davidwills008/kppay-gateway/pull/4`.
+- PR Foundation CI `verify`: `https://github.com/davidwills008/kppay-gateway/actions/runs/31106490916/job/92632890605` — success.
+- PR `dependency-review`: `https://github.com/davidwills008/kppay-gateway/actions/runs/31106490831/job/92632890810` — success.
+- PR `codeql`: `https://github.com/davidwills008/kppay-gateway/actions/runs/31106490831/job/92632891035` — success.
+- GitHub CodeQL result: `https://github.com/davidwills008/kppay-gateway/runs/92633313356` — success.
 
-Dependency-review jobs created while the repository was private failed because GitHub Advanced Security was unavailable at that time. A new pull request after public activation must prove dependency review and CodeQL together before `E-006` can become PASS.
+Dependency-review jobs created while the repository was private failed because GitHub Advanced Security was unavailable at that time. Governance PR 4 proved Foundation CI, dependency review, and CodeQL together after public activation; `E-006` is PASS.

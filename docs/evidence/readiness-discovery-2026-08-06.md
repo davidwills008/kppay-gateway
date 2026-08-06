@@ -14,6 +14,7 @@
 - GitHub later reported public visibility with repository update time 12:56 UTC. The user explicitly confirmed “keep public,” resolving `D-011`.
 - GitHub branch protection now requires strict `verify`, `dependency-review`, and `codeql` checks, two reviews, code-owner and last-push approval, stale-review dismissal, administrator enforcement, linear history, and resolved conversations; force pushes and deletion are disabled.
 - Secret scanning, push protection, vulnerability alerts, automated security updates, and private vulnerability reporting are enabled; latest main Foundation CI and Security analysis runs passed.
+- Governance PR 4 proved `verify`, `dependency-review`, and `codeql` successfully under the activated public controls, completing `E-006`.
 - Repository foundation evidence remains PASS; operational Stage 1 remains BLOCKED.
 
 ## Framework created
@@ -38,4 +39,4 @@
 - Checkstyle: 0 violations.
 - Coverage gate and SBOM generation: PASS.
 
-Next action: publish the CODEOWNERS/evidence pull request, verify all three required checks, then name a second eligible approver and complete the two-review test for `E-005`. No credential value should be placed in a document or chat response.
+Next action: name and grant appropriate access to two eligible non-author approvers, obtain both approvals on governance PR 4, and merge CODEOWNERS to complete `E-005`. No credential value should be placed in a document or chat response.
