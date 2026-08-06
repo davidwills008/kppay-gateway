@@ -4,9 +4,9 @@
 |---|---|---|---|---|---|---|---|
 | R-001 | P0 | Initialize local Git with `main` as the default branch | Platform Engineering | 2026-08-06 | None | `E-002` | PASS |
 | R-002 | P0 | Reauthenticate the approved `davidwills008` GitHub account without exposing its token | Repository Administrator | 2026-08-07 | D-001, D-008 | `E-003` | PASS |
-| R-003 | P0 | Select/create the remote, create the reviewed baseline commit, and push `main` | Repository Administrator | 2026-08-10 | R-002, D-001 | `E-004` | READY |
-| R-004 | P0 | Add valid CODEOWNERS; require two approvals and all CI/security checks on `main` | Repository Administrator | 2026-08-10 | R-003, D-002 | `E-005` | BLOCKED |
-| R-005 | P0 | Run CI, CodeQL, dependency review, Dependabot, and secret scanning | Repository Administrator | 2026-08-10 | R-003, R-004 | `E-006` | READY |
+| R-003 | P0 | Select/create the remote, create the reviewed baseline commit, and push `main` | Repository Administrator | 2026-08-10 | R-002, D-001 | `E-004` | PASS |
+| R-004 | P0 | Add valid CODEOWNERS; require two approvals and all CI/security checks on `main` | Repository Administrator | 2026-08-10 | R-003, D-002, D-011 | `E-005` | BLOCKED |
+| R-005 | P0 | Run CI, CodeQL, dependency review, Dependabot, and secret scanning | Repository Administrator | 2026-08-10 | R-003, R-004, D-011 | `E-006` | PASS |
 | R-006 | P0 | Create the non-production identity application; validate issuer, audience, claims, and key rotation | Security Engineering | 2026-08-17 | D-003, D-004 | `E-007` | BLOCKED |
 | R-007 | P0 | Provision managed secrets and workload identity; test read, rotation, audit, and revocation | Security Engineering | 2026-08-17 | D-003, D-005 | `E-008` | BLOCKED |
 | R-008 | P0 | Deploy the collector; receive logs, metrics, and traces; test mandatory alerts | SRE | 2026-08-17 | D-003, D-006 | `E-009` | BLOCKED |
