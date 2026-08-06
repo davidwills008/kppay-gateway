@@ -1,0 +1,11 @@
+# Bootstrap owner. Replace or augment this account with the approved teams from D-002.
+* @davidwills008
+
+/.github/ @davidwills008
+/AGENTS.md @davidwills008
+/SECURITY.md @davidwills008
+/pom.xml @davidwills008
+/api/ @davidwills008
+/config/ @davidwills008
+/docs/readiness/ @davidwills008
+/events/ @davidwills008

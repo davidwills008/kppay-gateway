@@ -35,8 +35,8 @@ Generated evidence is available locally under `target/surefire-reports/`, `targe
 
 ## Remaining operational blockers
 
-- Local Git is initialized on `main`, but there is no baseline commit or remote; GitHub workflows have not run.
-- Branch protection, required checks, valid team-based CODEOWNERS, private vulnerability reporting, and secret scanning require GitHub administration.
+- Remote `davidwills008/kppay-gateway` and baseline `8a5210a` now exist; Foundation CI and main-branch CodeQL passed, and repository security features are enabled.
+- GitHub rejected branch protection while the repository was private, then reported a change to public visibility at 12:56 UTC. The user confirmed public visibility; a second approver and final team-based ownership still remain required.
 - Identity provider, managed secret store, OpenTelemetry collector/backend, registry, signing, provenance, deployment, and rollback controls require platform choices and access.
 - Named people, on-call rotation, SLOs, escalation channel, and incident exercises remain required.
 

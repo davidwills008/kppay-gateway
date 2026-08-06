@@ -7,9 +7,9 @@ Evidence must be immutable or access-controlled, timestamped, attributable to a 
 | E-001 | Repository quality baseline | Clean build, test, coverage, SBOM, policy results and artifact hashes | PASS — `docs/evidence/foundation-audit-2026-08-06.md` |
 | E-002 | Local source-control initialization | `git rev-parse --is-inside-work-tree=true` and branch `main` | PASS — `docs/evidence/readiness-discovery-2026-08-06.md` |
 | E-003 | Approved GitHub authentication | Redacted successful `gh auth status`, account name, least-privilege scope review | PASS — `docs/evidence/readiness-discovery-2026-08-06.md` |
-| E-004 | Remote and baseline | Remote URL, baseline commit SHA, successful push | READY — private remote created; baseline commit and push pending |
-| E-005 | Ownership and branch policy | Valid CODEOWNERS path, ruleset URL/export, two-approval test, bypass list | MISSING |
-| E-006 | Remote automation | Green CI/CodeQL/dependency-review URLs, secret-scanning status, Dependabot evidence | MISSING |
+| E-004 | Remote and baseline | Remote URL, baseline commit SHA, successful push | PASS — `docs/evidence/readiness-discovery-2026-08-06.md` |
+| E-005 | Ownership and branch policy | Valid CODEOWNERS path, ruleset URL/export, two-approval test, bypass list | BLOCKED — protection active and CODEOWNERS pending; named second approver and two-review test missing; see `docs/evidence/github-controls-2026-08-06.md` |
+| E-006 | Remote automation | Green CI/CodeQL/dependency-review URLs, secret-scanning status, Dependabot evidence | READY — main CI/CodeQL and security activation verified; new-PR dependency review pending; see `docs/evidence/github-controls-2026-08-06.md` |
 | E-007 | Identity integration | Issuer/audience/claim configuration, authorized/unauthorized tests, rotation record | Local baseline PASS; external proof MISSING |
 | E-008 | Secrets lifecycle | Redacted IAM policy, successful workload read, audit event, rotation and revocation records | MISSING |
 | E-009 | Observability | Collector deployment, log/metric/trace links, dashboard and alert-fire/resolve tests | MISSING |

@@ -13,6 +13,7 @@ required_files=(
   docs/architecture.md
   docs/development-standards.md
   docs/evidence/foundation-audit-2026-08-06.md
+  docs/evidence/github-controls-2026-08-06.md
   docs/evidence/readiness-discovery-2026-08-06.md
   docs/production-readiness.md
   docs/readiness/README.md
@@ -65,7 +66,7 @@ if grep -REq 'uses: [^ ]+@(main|master|v[0-9])' .github/workflows; then
   exit 1
 fi
 
-for number in {1..10}; do
+for number in {1..11}; do
   printf -v id 'D-%03d' "${number}"
   if ! grep -Fq "${id}" docs/readiness/decision-register.md; then
     printf 'repository-policy=FAIL missing-decision=%s\n' "${id}" >&2
