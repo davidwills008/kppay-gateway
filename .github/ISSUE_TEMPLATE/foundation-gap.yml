@@ -1,0 +1,38 @@
+name: Foundation gap
+description: Track a production-readiness control that is missing or has failed.
+title: "[foundation] "
+labels:
+  - foundation
+body:
+  - type: textarea
+    id: gap
+    attributes:
+      label: Gap and evidence
+      description: Describe the failed control and link its evidence.
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Accountable owner
+      description: Name the accountable team or person.
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Remediation deadline
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: State the observable conditions required to close this gap.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies or blockers

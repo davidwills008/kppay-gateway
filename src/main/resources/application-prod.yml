@@ -1,0 +1,31 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${KPPAY_SECURITY_JWT_ISSUER_URI}
+          audiences: ${KPPAY_SECURITY_JWT_AUDIENCES}
+
+kppay:
+  security:
+    jwt-enabled: true
+
+management:
+  tracing:
+    export:
+      enabled: true
+      otlp:
+        enabled: true
+  otlp:
+    metrics:
+      export:
+        enabled: true
+        url: ${OTEL_EXPORTER_OTLP_METRICS_ENDPOINT}
+  opentelemetry:
+    tracing:
+      export:
+        otlp:
+          endpoint: ${OTEL_EXPORTER_OTLP_TRACES_ENDPOINT}

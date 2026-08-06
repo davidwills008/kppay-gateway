@@ -1,0 +1,77 @@
+spring:
+  application:
+    name: ${SERVICE_NAME:kppay-service-template}
+    group: kppay
+  config:
+    import: optional:configtree:/run/secrets/
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  mvc:
+    problemdetails:
+      enabled: true
+
+server:
+  port: ${SERVER_PORT:8080}
+  shutdown: graceful
+  error:
+    include-binding-errors: never
+    include-exception: false
+    include-message: never
+    include-stacktrace: never
+
+kppay:
+  security:
+    # When disabled, health remains public and every application endpoint is denied.
+    # Production services must enable JWT and provide an issuer or JWK Set URI.
+    jwt-enabled: ${KPPAY_SECURITY_JWT_ENABLED:false}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: never
+  info:
+    env:
+      enabled: true
+  observations:
+    key-values:
+      service: ${spring.application.name}
+      environment: ${DEPLOYMENT_ENVIRONMENT:local}
+      owner: ${SERVICE_OWNER:kppay-platform}
+  tracing:
+    sampling:
+      probability: ${OTEL_TRACES_SAMPLER_PROBABILITY:0.1}
+    export:
+      otlp:
+        enabled: ${OTEL_TRACES_EXPORT_ENABLED:false}
+  otlp:
+    metrics:
+      export:
+        enabled: ${OTEL_METRICS_EXPORT_ENABLED:false}
+        url: ${OTEL_EXPORTER_OTLP_METRICS_ENDPOINT:http://localhost:4318/v1/metrics}
+  opentelemetry:
+    resource-attributes:
+      service.name: ${spring.application.name}
+      service.namespace: kppay
+      service.version: ${SERVICE_VERSION:development}
+      deployment.environment.name: ${DEPLOYMENT_ENVIRONMENT:local}
+    tracing:
+      export:
+        otlp:
+          endpoint: ${OTEL_EXPORTER_OTLP_TRACES_ENDPOINT:http://localhost:4318/v1/traces}
+
+info:
+  service:
+    name: ${spring.application.name}
+    description: KPPay production Java microservice foundation
+    owner: ${SERVICE_OWNER:kppay-platform}
+
+logging:
+  structured:
+    format:
+      console: ${CONSOLE_LOG_STRUCTURED_FORMAT:ecs}
