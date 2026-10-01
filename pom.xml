@@ -14,7 +14,7 @@
 	<name>kppay-service-template</name>
 	<description>KPPay production Java microservice golden-path foundation</description>
 	<properties>
-		<archunit.version>1.4.2</archunit.version>
+		<archunit.version>1.5.1</archunit.version>
 		<checkstyle.version>13.9.0</checkstyle.version>
 		<jacoco.version>0.8.15</jacoco.version>
 		<java.version>25</java.version>
