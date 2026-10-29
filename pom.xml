@@ -16,7 +16,7 @@
 	<properties>
 		<archunit.version>1.4.2</archunit.version>
 		<checkstyle.version>13.9.0</checkstyle.version>
-		<jacoco.version>0.8.15</jacoco.version>
+		<jacoco.version>0.8.16</jacoco.version>
 		<java.version>25</java.version>
 		<maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
 		<maven-site-plugin.version>3.22.0</maven-site-plugin.version>
